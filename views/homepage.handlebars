@@ -1,11 +1,11 @@
 {{#each posts as |post|}}
 <div class="blog-section">
     <div class="blog-header">
-        <a href="/post/{{post.id}}">{{post.title}}</a>
-        <p>posted by {{post.user.username}} at {{format_date post.created_at}}</p>
+        <a href="/post/{{post.id}}" class="blog-title">{{post.title}}</a>
+        <p class="blog-info">Posted by <span class="username">{{post.user.username}}</span> at <span class="date">{{format_date post.created_at}}</span></p>
     </div>
-    <p class="blog-text">
-        {{post.post_content}}
-    </p>
+    <div class="blog-content">
+        <p class="blog-text">{{post.post_content}}</p>
+    </div>
 </div>
 {{/each}}
